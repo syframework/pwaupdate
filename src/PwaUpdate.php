@@ -13,7 +13,7 @@ class PwaUpdate extends Element {
 	private $properties;
 
 	public function __construct(array $properties = array()) {
-		parent::__construct('pwaupdate');
+		parent::__construct('pwa-update');
 		$this->properties = $properties;
 	}
 
@@ -23,7 +23,7 @@ class PwaUpdate extends Element {
 	}
 
 	private function init() {
-		$this->addJsLink(['url' => 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate', 'crossdomain' => 'anonymous']);
+		$this->addJsLink(['url' => 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate', 'crossdomain' => 'anonymous'], ['type' => 'module']);
 		$this->setAttributes($this->properties);
 	}
 
