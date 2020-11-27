@@ -13,7 +13,7 @@ class PwaUpdate extends Element {
 	private $properties;
 
 	public function __construct(array $properties = array()) {
-		parent::__construct('pwaupdate');
+		parent::__construct('pwa-update');
 		$this->properties = $properties;
 	}
 
