@@ -23,7 +23,7 @@ class PwaUpdate extends Element {
 	}
 
 	private function init() {
-		$this->addJsLink(['url' => 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate', 'crossdomain' => 'anonymous']);
+		$this->addJsLink(['url' => 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate', 'crossdomain' => 'anonymous'], ['type' => 'module']);
 		$this->setAttributes($this->properties);
 	}
 
