@@ -15,11 +15,9 @@ class PwaUpdate extends Element {
 	public function __construct(array $properties = array()) {
 		parent::__construct('pwa-update');
 		$this->properties = $properties;
-	}
-
-	public function __toString() {
-		$this->init();
-		return parent::__toString();
+		$this->mount(function () {
+			$this->init();
+		});
 	}
 
 	private function init() {
